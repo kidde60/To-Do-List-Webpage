@@ -1,0 +1,48 @@
+
+.heading {
+  margin: auto;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input {
+  margin: 10px 25%;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.list {
+  margin: 10px 25%;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.check {
+  height: 30px;
+  width: 25px;
+}
+
+.paragraph {
+  width: 100%;
+  font-size: 20px;
+}
+
+.btn {
+  width: 50%;
+  border: 0;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px 25%;
+}
