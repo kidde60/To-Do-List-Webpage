@@ -1,6 +1,6 @@
-# To Do list: list structure
+# To Do list: add & remove
 
-> In this project, you will build a simple HTML list of To Do tasks. The list will be styled according to the specifications listed later in this lesson. This simple web page will be built using webpack and served by a webpack dev server.
+> In this project, you will implement the CRUD (create, read, update, delete) methods. All the elements of the user interface will be fully functional and your application will be completed.
 
 ![](https://img.shields.io/badge/Microverse-blueviolet).
 
@@ -12,7 +12,7 @@
 - webpack
 
 ## Live Link
-- 
+-  https://kidde60.github.io/test/
 
 ## Getting Started
 
