@@ -126,3 +126,4 @@ window.addEventListener('load', () => {
   taskInput.addEventListener('keyup', addTasks);
   tasksDisplay();
 });
+module.exports = tasksDisplay;
