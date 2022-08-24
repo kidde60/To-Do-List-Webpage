@@ -126,4 +126,13 @@ window.addEventListener('load', () => {
   taskInput.addEventListener('keyup', addTasks);
   tasksDisplay();
 });
+
+module.exports = addTasks;
 module.exports = tasksDisplay;
+module.exports = checkBtn;
+module.exports = checkTask;
+module.exports = editButton;
+module.exports = editTask;
+module.exports = trashBtn;
+module.exports = removeTask;
+module.exports = resetIndex;

@@ -1,6 +1,6 @@
-const tasksDisplay = require('./src/index.js')
+//const tasksDisplay = require('./src/index.js')
 
-function addTasks(e) {
+export function addTasks(e) {
     const EnteredTask = taskInput.value.trim();
     if (e.key === 'Enter' && EnteredTask) {
         if (!isEditedTask) {
