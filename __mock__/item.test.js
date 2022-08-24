@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 // {
 
 //         description: 'value',
