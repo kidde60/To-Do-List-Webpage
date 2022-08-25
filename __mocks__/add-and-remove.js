@@ -1,4 +1,4 @@
-import LocalStorage from "./localStorage.js";
+import LocalStorage from './localStorage.js';
 
 export const localstorage = new LocalStorage();
 
@@ -24,8 +24,8 @@ export const tasksDisplay = () => {
 
 export const addTask = (task) => {
   localstorage.setItem(task);
-}
+};
 
 export const removeTask = (index) => {
   localstorage.taskArray.splice(index, 1);
-}
+};

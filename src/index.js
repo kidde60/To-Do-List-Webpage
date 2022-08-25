@@ -106,9 +106,9 @@ function addTasks(e) {
       }
       const arrayStore = JSON.parse(localStorage.getItem('tasks')) || [];
       const arrayLength = arrayStore.length;
-      
+
       const task = new Task(EnteredTask, false, arrayLength + 1);
-    
+
       localTasks.push(task);
     } else {
       isEditedTask = false;

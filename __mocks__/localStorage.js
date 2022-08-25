@@ -8,7 +8,6 @@ export default class LocalStorage {
   }
 
   setItem(value) {
-    // this.taskArray[key] = [...this.taskArray, value];
     this.taskArray.push(value);
   }
 
