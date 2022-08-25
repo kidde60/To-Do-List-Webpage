@@ -82,6 +82,12 @@ To get a local copy up and running follow these simple example steps.
 - GitHub: [@kidde60](https://github.com/kidde60)
 - LinkedIn: [@George William Kidde](https://linkedin.com/in/george-william-kidde-b5b772231/)
 
+👤 **Losalini Rokocakau**
+
+- GitHub: [@chelmerrox](https://github.com/chelmerrox)
+- Twitter:[@chelmerrox](https://twitter.com/chelmerrox)
+- LinkedIn: [@Losalini Rokocakau](https://linkedin.com/in/losalini-rokocakau)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!

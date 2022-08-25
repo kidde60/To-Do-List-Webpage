@@ -1,5 +1,6 @@
 import './style.css';
 import './modules/complete.js';
+import Task from './Task.js';
 
 const taskContainer = document.querySelector('.list');
 const taskInput = document.querySelector('.input-field');
@@ -105,12 +106,10 @@ function addTasks(e) {
       }
       const arrayStore = JSON.parse(localStorage.getItem('tasks')) || [];
       const arrayLength = arrayStore.length;
-      const taskInfo = {
-        description: EnteredTask,
-        completed: false,
-        index: arrayLength + 1,
-      };
-      localTasks.push(taskInfo);
+
+      const task = new Task(EnteredTask, false, arrayLength + 1);
+
+      localTasks.push(task);
     } else {
       isEditedTask = false;
       localTasks[editIndex].description = EnteredTask;
