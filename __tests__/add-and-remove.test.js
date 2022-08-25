@@ -17,13 +17,13 @@ describe('add a task to the list', () => {
     expect(localstorage.getAllItems()[0].description).toBe('Task 1');
   });
 
-  /* test('should have a length of 2 after adding two tasks to the list in the DOM', () => {
+   test('should have a length of 2 after adding two tasks to the list in the DOM', () => {
     tasksDisplay();
 
     const listContainer = Array.from(document.querySelector('.list').childNodes);
     
     expect(listContainer.length).toBe(2);
-  }); */
+  }); 
 });
 
 describe('remove a task from the list', () => {
