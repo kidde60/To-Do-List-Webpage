@@ -3,8 +3,8 @@
  */
 
 import { tasksDisplay, addTask, removeTask, localstorage } from '../__mocks__/add-and-remove.js';
-/* import Task from '../src/Task.js';
-import { appendChild } from 'parse5/lib/tree-adapters/default.js'; */
+import Task from '../src/Task.js';
+import { appendChild } from 'parse5/lib/tree-adapters/default.js'; 
 
 describe('add a task to the list', () => {
   test('should give Task 1 as the description of the first task', () => {
