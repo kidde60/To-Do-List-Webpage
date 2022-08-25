@@ -1,22 +1,22 @@
 export default class LocalStorage {
-  constructor(){
+  constructor() {
     this.taskArray = [];
   }
 
-  getItem(key){
+  getItem(key) {
     return this.taskArray[key];
   }
 
-  setItem(value){
-    //this.taskArray[key] = [...this.taskArray, value];
+  setItem(value) {
+    // this.taskArray[key] = [...this.taskArray, value];
     this.taskArray.push(value);
   }
 
-  clearItems(){
+  clearItems() {
     this.taskArray = [];
   }
 
-  getAllItems(){
+  getAllItems() {
     return this.taskArray;
   }
 }
