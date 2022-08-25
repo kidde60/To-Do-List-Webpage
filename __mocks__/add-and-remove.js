@@ -1,4 +1,4 @@
-//import LocalStorage from "./localStorage.js";
+import LocalStorage from "./localStorage.js";
 
 export const localstorage = new LocalStorage();
 
