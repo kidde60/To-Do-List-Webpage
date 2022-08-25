@@ -33,11 +33,11 @@ describe('remove a task from the list', () => {
     expect(localstorage.getAllItems()[0].description).toBe('Task 2');
   });
 
-  /* test('should have a length of 1 after removing Task 1 from the list in the DOM', () => {
+   test('should have a length of 1 after removing Task 1 from the list in the DOM', () => {
     tasksDisplay();
 
     const listContainer = Array.from(document.querySelector('.list').childNodes);
     
     expect(listContainer.length).toBe(1);
-  }); */
+  }); 
 });
