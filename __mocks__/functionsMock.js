@@ -1,6 +1,5 @@
-import e from "express";
-import Task from "../src/Task.js";
-import LocalStorage from "./localStorage.js";
+// import Task from '../src/Task.js';
+import LocalStorage from './localStorage.js';
 
 export const localstorage = new LocalStorage();
 
@@ -15,7 +14,7 @@ export const editButton = (task, taskIndex, newDescription) => {
 };
 
 export const checkTask = (checkedTasks) => {
-  checkedTasks.forEach((checkedId, i) => {
+  checkedTasks.forEach((checkedId) => {
     localstorage.getItem(checkedId).completed = true;
   });
 };
@@ -55,5 +54,5 @@ export const removeTask = (index) => {
 
   localstorage.taskArray.forEach((item, i) => {
     item.index = i;
-  })
+  });
 };
