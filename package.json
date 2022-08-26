@@ -749,7 +749,7 @@
     "webpack-cli": "^4.10.0"
   },
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest",
     "deploy": "gh-pages -d dist",
     "start": "webpack serve --open",
     "build": "webpack"
