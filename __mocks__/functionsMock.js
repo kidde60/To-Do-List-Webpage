@@ -57,21 +57,3 @@ export const removeTask = (index) => {
     item.index = i;
   })
 };
-
-/* function checkTask(event) {
-  const taskName = event.target.parentElement.lastElementChild;
-  if (event.target.checked) {
-    taskName.classList.add('checked');
-    localTasks[event.target.id].completed = true;
-  } else {
-    taskName.classList.remove('checked');
-    localTasks[event.target.id].completed = false;
-  }
-  localStorage.setItem('tasks', JSON.stringify(localTasks));
-} */
-
-/* function checkBtn() {
-  document.querySelectorAll('.check-input').forEach((el) => {
-    el.addEventListener('click', checkTask);
-  });
-} */

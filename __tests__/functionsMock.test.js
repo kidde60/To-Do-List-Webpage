@@ -102,6 +102,8 @@ import { add } from 'lodash';
 
     taskA.checked = true;
     taskC.checked = true;
+    taskA.classList.add('checked');
+    taskC.classList.add('checked');
 
     checkedTasks.push(id1, id2);
 
