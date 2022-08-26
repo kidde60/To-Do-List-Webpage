@@ -2,12 +2,12 @@
  * @jest-environment jsdom
  */
 
- import { tasksDisplay, addTask, removeTask, localstorage, editButton, editTask, checkBtn } from '../__mocks__/functionsMock.js';
- import Task from '../src/Task.js';
- import { appendChild } from 'parse5/lib/tree-adapters/default.js';
-import { add } from 'lodash';
+import { tasksDisplay, addTask, removeTask, localstorage, editButton, editTask, checkBtn } from '../__mocks__/functionsMock.js';
+import Task from '../src/Task.js';
+import { appendChild } from 'parse5/lib/tree-adapters/default.js';
+import { add, remove } from 'lodash';
  
- describe('add a task to the list', () => {
+describe('add a task to the list', () => {
    test('should give Task 1 as the description of the first task', () => {
      const task1 = new Task(1, 'Task 1', false);
      const task2 = new Task(2, 'Task 2', false);
@@ -25,9 +25,9 @@ import { add } from 'lodash';
      
      expect(listContainer.length).toBe(2);
    });
- });
+});
  
- describe('remove a task from the list', () => {
+describe('remove a task from the list', () => {
    test('should give Task 2 as the first task after removing Task 1 from the list', () => {
      removeTask(0);
  
@@ -41,9 +41,9 @@ import { add } from 'lodash';
      
      expect(listContainer.length).toBe(1);
    });
- });
+});
  
- describe(('edit a task in the list'), () => {
+describe('edit a task in the list', () => {
    test('should change description from Task 2 to New Task', () => {
      let taskA = localstorage.getItem(0);
      let taskAIndex = localstorage.getItem(0).index;
@@ -77,9 +77,9 @@ import { add } from 'lodash';
 
     expect(p.textContent).toBe('New Task');
    });
- });
+});
 
- describe(('completed status of a task in a list'), () => {
+describe('complete property of a task in a list', () => {
   test('change all checked item\'s completed status to true', () => {
     const a = new Task(1, 'A', false);
     const b = new Task(2, 'B', false);
@@ -112,5 +112,28 @@ import { add } from 'lodash';
     expect(localstorage.getItem(1).completed).toBe(true);
     expect(localstorage.getItem(3).completed).toBe(true);
   });  
- });
+});
+
+describe('clear all completed tasks from the list', () => {
+  test('should have a length of 3 after removing the completed tasks', () => {
+    removeTask(1);
+    removeTask(2);  
+
+    expect(localstorage.getAllItems().length).toBe(3);
+  });
+
+  test('should have a length of 3 after removing from the list in the DOM', () => {
+    tasksDisplay();
+
+    const listContainer = Array.from(document.querySelector('.list').childNodes);
+
+    expect(listContainer.length).toBe(3);
+  });
+
+  test('should have B at index 1 after removing two tasks from the list', () => {
+    console.log(localstorage.getAllItems());
+
+    expect(localstorage.getItem(1).description).toBe('B');
+  });
+});
  
