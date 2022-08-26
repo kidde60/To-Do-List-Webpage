@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <coverage generated="1661517350394" clover="3.2.0">
   <project timestamp="1661517350394" name="All files">
+=======
+<coverage generated="1661535690201" clover="3.2.0">
+  <project timestamp="1661535690202" name="All files">
+>>>>>>> 2c37657a4eeacda1c4580bb5202f4c7c909524a6
     <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="4" coveredelements="4" complexity="0" loc="3" ncloc="3" packages="1" files="1" classes="1"/>
     <file name="Task.js" path="C:\Users\Losalini R\Desktop\microverse-2-0\module-2\week-3\To-Do-List-Webpage\src\Task.js">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
