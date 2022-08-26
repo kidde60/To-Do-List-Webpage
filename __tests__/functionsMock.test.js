@@ -2,9 +2,10 @@
  * @jest-environment jsdom
  */
 
- import { tasksDisplay, addTask, removeTask, localstorage, editButton, editTask } from '../__mocks__/functionsMock.js';
+ import { tasksDisplay, addTask, removeTask, localstorage, editButton, editTask, checkBtn } from '../__mocks__/functionsMock.js';
  import Task from '../src/Task.js';
  import { appendChild } from 'parse5/lib/tree-adapters/default.js';
+import { add } from 'lodash';
  
  describe('add a task to the list', () => {
    test('should give Task 1 as the description of the first task', () => {
@@ -74,8 +75,40 @@
     //<p> in the edited task which in this example/test is the first element in node list
     const p = document.querySelector('.parahraph');
 
-    console.log(p.textContent);
-
     expect(p.textContent).toBe('New Task');
    });
  });
+
+ describe(('completed status of a task in a list'), () => {
+  test('change all checked item\'s completed status to true', () => {
+    const a = new Task(1, 'A', false);
+    const b = new Task(2, 'B', false);
+    const c = new Task(3, 'C', false);
+    const d = new Task(4, 'D', false);
+
+    addTask(a);
+    addTask(b);
+    addTask(c);
+    addTask(d);
+
+    tasksDisplay();
+
+    let checkedTasks = [];
+    const taskA = document.getElementById('1'); // A
+    const taskC = document.getElementById('3'); // C
+
+    let id1 = taskA.getAttribute('id');
+    let id2 = taskC.getAttribute('id');
+
+    taskA.checked = true;
+    taskC.checked = true;
+
+    checkedTasks.push(id1, id2);
+
+    checkBtn(checkedTasks);
+
+    expect(localstorage.getItem(1).completed).toBe(true);
+    expect(localstorage.getItem(3).completed).toBe(true);
+  });  
+ });
+ 

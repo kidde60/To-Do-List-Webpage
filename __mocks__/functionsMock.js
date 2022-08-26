@@ -1,3 +1,4 @@
+import e from "express";
 import Task from "../src/Task.js";
 import LocalStorage from "./localStorage.js";
 
@@ -10,6 +11,18 @@ export const editTask = (task, taskIndex, newDescription) => {
 export const editButton = (task, taskIndex, newDescription) => {
   document.querySelectorAll('.edit').forEach((el) => {
     el.addEventListener('click', editTask(task, taskIndex, newDescription));
+  });
+};
+
+export const checkTask = (checkedTasks) => {
+  checkedTasks.forEach((checkedId, i) => {
+    localstorage.getItem(checkedId).completed = true;
+  });
+};
+
+export const checkBtn = (checkedTasks) => {
+  document.querySelectorAll('.check-input').forEach((el) => {
+    el.addEventListener('click', checkTask(checkedTasks));
   });
 };
 
@@ -44,3 +57,21 @@ export const removeTask = (index) => {
     item.index = i;
   })
 };
+
+/* function checkTask(event) {
+  const taskName = event.target.parentElement.lastElementChild;
+  if (event.target.checked) {
+    taskName.classList.add('checked');
+    localTasks[event.target.id].completed = true;
+  } else {
+    taskName.classList.remove('checked');
+    localTasks[event.target.id].completed = false;
+  }
+  localStorage.setItem('tasks', JSON.stringify(localTasks));
+} */
+
+/* function checkBtn() {
+  document.querySelectorAll('.check-input').forEach((el) => {
+    el.addEventListener('click', checkTask);
+  });
+} */
