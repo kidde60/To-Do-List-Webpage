@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
- import { tasksDisplay, addTask, removeTask, localstorage, editButton } from '../__mocks__/functionsMock.js';
+ import { tasksDisplay, addTask, removeTask, localstorage, editButton, editTask } from '../__mocks__/functionsMock.js';
  import Task from '../src/Task.js';
  import { appendChild } from 'parse5/lib/tree-adapters/default.js';
  
@@ -52,13 +52,12 @@
      editButton(taskA, taskAIndex, newDescription);
  
      tasksDisplay();
-     
-     console.log(localstorage.getItem(0));
+
      expect(localstorage.getItem(0).description).toBe('New Task');
    });
  
-   test('the index of edited task should still be 1', () => {
-     expect(localstorage.getItem(0).index).toBe(1);
+   test('the index of edited task should still be 0', () => {
+     expect(localstorage.getItem(0).index).toBe(0);
    });
  
    test('should still have a length of 1 after editing a task', () => {
@@ -70,17 +69,13 @@
    });
  
    test('should have New Task as the edited description in the DOM', () => {
-     tasksDisplay(localstorage.getItem(0));
+     tasksDisplay();
  
-     const inputandText = document.querySelectorAll('.list').firstChild;
- 
-     console.log(localstorage.getItem(0));
-     console.log(inputandText);
-     //console.log(inputandText.innerHTML);
-     //console.log(inputandText.innerText);
-     //console.log(inputandText.textContent);
-     
-     expect(inputandText).toBe('New Task');
+    //<p> in the edited task which in this example/test is the first element in node list
+    const p = document.querySelector('.parahraph');
+
+    console.log(p.textContent);
+
+    expect(p.textContent).toBe('New Task');
    });
  });
- 

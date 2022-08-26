@@ -13,16 +13,6 @@ export const editButton = (task, taskIndex, newDescription) => {
   });
 };
 
-/* export const checkTask = () => {
-
-} */
-
-export const checkBtn = () => {
-  document.querySelectorAll('.check-input').forEach((el) => {
-    el.addEventListener('click', checkTask);
-  });
-}
-
 export const tasksDisplay = () => {
   document.body.innerHTML = '<div class="list"></div>';
   localstorage.getAllItems().forEach((task) => {
@@ -45,25 +35,12 @@ export const tasksDisplay = () => {
 
 export const addTask = (task) => {
   localstorage.setItem(task);
-}
+};
 
 export const removeTask = (index) => {
   localstorage.taskArray.splice(index, 1);
 
-
   localstorage.taskArray.forEach((item, i) => {
-    item.index = i + 1;
+    item.index = i;
   })
-}
-
-/* function checkTask(event) {
-  const taskName = event.target.parentElement.lastElementChild;
-  if (event.target.checked) {
-    taskName.classList.add('checked');
-    localTasks[event.target.id].completed = true;
-  } else {
-    taskName.classList.remove('checked');
-    localTasks[event.target.id].completed = false;
-  }
-  localStorage.setItem('tasks', JSON.stringify(localTasks));
-} */
+};
