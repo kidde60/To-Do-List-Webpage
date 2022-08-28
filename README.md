@@ -100,9 +100,12 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Our God & families
+- Microverse
+- Microverse team members for the extra help & guidance:
+ 1. [Nii Darku](https://github.com/niicode)
+ 2. [Habiburahman Payenda](https://github.com/HabibPayenda) 
+- Microverse TSEs
 
 ## 📝 License
 
